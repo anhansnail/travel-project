@@ -1,6 +1,6 @@
 <?php
 
-namespace Longtt\B2s\Model\Observer;
+namespace VMA\User\Model\Observer;
 
 
 use Longtt\B2s\Model\Log_xnk_npp;

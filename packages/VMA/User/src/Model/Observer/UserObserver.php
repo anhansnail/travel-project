@@ -1,9 +1,9 @@
 <?php
 
-namespace Longtt\B2s\Model\Observer;
+namespace VMA\User\Model\Observer;
 
 
-use Longtt\User\Model\User;
+use VMA\User\Model\User;
 use Longtt\B2s\Model\User_account;
 
 class UserObserver

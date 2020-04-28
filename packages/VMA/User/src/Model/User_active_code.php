@@ -5,10 +5,10 @@
  * Date: 2/7/17
  * Time: 4:23 PM
  */
-namespace Longtt\B2s\Model;
+namespace VMA\User\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use Longtt\User\Model\User;
+use VMA\User\Model\User;
 
 class User_active_code extends Model {
     public $table = 'user_active_code';

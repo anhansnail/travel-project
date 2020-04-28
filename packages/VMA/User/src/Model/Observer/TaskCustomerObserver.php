@@ -1,6 +1,6 @@
 <?php
 
-namespace Longtt\B2s\Model\Observer;
+namespace VMA\User\Model\Observer;
 
 
 use Longtt\B2s\Model\Statistic_check_in_qualities;

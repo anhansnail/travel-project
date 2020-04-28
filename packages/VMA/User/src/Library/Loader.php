@@ -1,6 +1,6 @@
 <?php
 
-namespace Longtt\B2s\Library;
+namespace VMA\User\Library;
 
 use Illuminate\Support\Facades\Config;
 

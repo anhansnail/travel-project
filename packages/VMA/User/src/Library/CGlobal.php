@@ -4,7 +4,7 @@
  * User: QuynhTM
  */
 
-namespace Longtt\B2s\Library;
+namespace VMA\User\Library;
 
 
 class CGlobal
@@ -51,10 +51,10 @@ class CGlobal
         'huy' => 'Huỷ'
     ];
 
-    public static $transaction_type = [
-        NAP_TIEN => 'Nạp tiền',
-        RUT_TIEN => 'Rút tiền',
-        CHUYEN_TIEN => 'Chuyển tiền'
-    ];
+//    public static $transaction_type = [
+//        NAP_TIEN => 'Nạp tiền',
+//        RUT_TIEN => 'Rút tiền',
+//        CHUYEN_TIEN => 'Chuyển tiền'
+//    ];
 
 }

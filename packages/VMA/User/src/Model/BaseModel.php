@@ -1,5 +1,5 @@
 <?php
-namespace Longtt\B2s\Model;
+namespace VMA\User\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
