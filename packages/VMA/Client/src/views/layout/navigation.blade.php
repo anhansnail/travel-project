@@ -1,8 +1,11 @@
 <!-- Navigation -->
+
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -11,12 +14,26 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#about">Lifestyle</a></li>
-                <li><a href="#contact">Travel</a></li>
-                <li><a href="#contact">Fashion</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="about.html">Contact</a></li>
+                <li class="">
+                    <a class="btn" href="{{url('/client/home')}}">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a class="btn" onmouseenter="check_category();" href="{{url('/client/product')}}">Travel
+                        Service
+                    </a>
+                    <div id="manu_category" class="dropdown-content ">
+                        <!-- Danh sách thư mục sẽ ở đây-->
+                    </div>
+                </li>
+                <li>
+                    <a class="btn" href="{{url('/client/product')}}">News</a>
+                </li>
+                <li>
+                    <a class="btn " href="{{url('/client/home')}}">About Me</a>
+                </li>
+                <li>
+                    <a class="btn" href="{{url('/client/home')}}">Contact</a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -32,3 +49,19 @@
         <!--/.nav-collapse -->
     </div>
 </nav>
+<script language="javascript">
+    function check_category() {
+        console.log('sss');
+        $.ajax({
+            url: ("{{route("check.category.ajax")}}"),
+            method: "POST",
+            data: {},
+            success: function (data) {
+                // alert(data);
+                if (data != null) {
+                    $('#manu_category').html(data);
+                }
+            }
+        });
+    }
+</script>

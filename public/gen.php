@@ -12,7 +12,7 @@ $username = "root";
 $password = "";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=staging", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=travel_project", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connected successfully";
@@ -41,8 +41,8 @@ Chọn Bảng:
 <?php
 if(isset($_GET['table'])){
     $table=$_GET['table'];
-    $namespace='Longtt\\B2s';
-    $view='b2s';
+    $namespace='VMA\\Admin';
+    $view='admin';
     if (substr($table, -1) == 's')
     {
         $table_without_s = substr($table, 0, -1);
@@ -445,7 +445,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use $namespace\Model\\{$table_upper_without_s};
 
-class ImportInventoryController extends Controller
+class IndexController extends Controller
 {
     public function index()
     {

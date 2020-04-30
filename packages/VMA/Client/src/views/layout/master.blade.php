@@ -26,4 +26,5 @@
 <script src="<?php echo getUrl('/'); ?>/BucketAdmin/html/js/icheck-init.js"></script>
 @include('client::layout.footer')
 </body>
+
 </html>
