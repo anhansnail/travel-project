@@ -1,6 +1,6 @@
 <?php
 Route::get('/test', function () {
-    return view('client::contact');
+    return view('welcome');
 });
 
 #home
@@ -19,6 +19,9 @@ Route::get('/client/about_us', 'VMA\Client\Controllers\AboutUsController@index')
 #contact
 Route::get('/client/contact', 'VMA\Client\Controllers\ContactController@index')->name('client.contact');
 Route::post('/client/contact', 'VMA\Client\Controllers\ContactController@store');
+
+#chatbot
+//Route::get('/test', 'BotManController@tinker');
 
 ###ajax
 Route::post('/client/check_menu_category', 'VMA\Client\Controllers\AjaxController@check_menu_category')->name('check.category.ajax');

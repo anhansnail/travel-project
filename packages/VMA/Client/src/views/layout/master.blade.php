@@ -30,6 +30,9 @@
 </div>
 <script src="<?php echo getUrl('/'); ?>/BucketAdmin/html/js/icheck-init.js"></script>
 @include('client::layout.footer')
+{{--Botman chatbot--}}
+<script id="botmanWidget" src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/chat.js'></script>
+
 </body>
 
 </html>

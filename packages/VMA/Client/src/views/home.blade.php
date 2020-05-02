@@ -108,5 +108,15 @@
             </div>
         </div>
     </section>
+    <script>
+        var botmanWidget = {
+            frameEndpoint: '/botman/chat',
+            title: 'Minh Anh',
+            bubbleBackground : '#ff9775',
+            mainColor : '#FF9775',
+            displayMessageTime : true
 
+        };
+    </script>
+    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 @endsection

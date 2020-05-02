@@ -10,7 +10,14 @@
 
     <link rel="icon" href="<?php echo getUrl('/'); ?>/BucketAdmin/html/browser_icon.jpg">
 
-    <title>{{__('MINH ANH TRAVEL')}}</title>    <!-- Bootstrap core CSS -->
+    <title>{{__('MINH ANH TRAVEL')}}</title>
+
+    <!-- Botman library - chatbot -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+
+
+
+    <!-- Bootstrap core CSS -->
     <link href="<?php echo getUrl('/'); ?>/ClientAsset/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
