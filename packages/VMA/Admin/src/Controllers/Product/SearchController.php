@@ -25,7 +25,7 @@ class SearchController extends Controller
          ->orWhere('created_at', 'LIKE', "%$query%")
          ->orWhere('updated_at', 'LIKE', "%$query%")
 
-            ->paginate(3);
+            ->paginate(20);
         }
         else
         {

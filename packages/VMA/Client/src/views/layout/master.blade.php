@@ -14,8 +14,13 @@
 
     <!--sidebar end-->
     <!--main content start-->
-    <section id="main-content" class="">
 
+    <section id="main-content" class="">
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         @yield('client_content')
 
     </section>

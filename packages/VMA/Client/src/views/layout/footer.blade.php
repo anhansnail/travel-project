@@ -11,7 +11,7 @@
     </div>
 
     <div class="footer-bottom">
-        Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+        Created By <i class="fa fa-love"></i><a href="https://anhansnail12.000webhostapp.com">Minh Anh Vuong</a>
     </div>
 </footer>
 

@@ -29,10 +29,10 @@
                     <a class="btn" href="{{url('/client/product')}}">News</a>
                 </li>
                 <li>
-                    <a class="btn " href="{{url('/client/home')}}">About Me</a>
+                    <a class="btn " href="{{url('/client/about_us')}}">About Us</a>
                 </li>
                 <li>
-                    <a class="btn" href="{{url('/client/home')}}">Contact</a>
+                    <a class="btn" href="{{url('/client/contact')}}">Contact</a>
                 </li>
             </ul>
 

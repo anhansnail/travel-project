@@ -778,7 +778,7 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 8. Footer
 -------------------------------------*/
 
-.footer { background-color: #4d8638; padding-top: 50px; padding-bottom: 50px; color: #bfedae; }
+.footer { background-color: #000000; padding-top: 50px; padding-bottom: 50px; color: #bfedae; }
 .footer-widget { margin-bottom: 30px; }
 .footer-title { margin-bottom: 40px; color: #fff; }
 .footer-widget { }

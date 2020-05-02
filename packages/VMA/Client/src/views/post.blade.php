@@ -51,7 +51,7 @@
                 <aside>
                     <!-- sidebar-widget -->
                     <div class="sidebar-widget">
-                        <h3 class="sidebar-title">About Me</h3>
+                        <h3 class="sidebar-title">About Us</h3>
                         <div class="widget-container widget-about">
                             <a href="post.html"><img src="images/author.jpg" alt=""></a>
                             <h4>Jamie Mooz</h4>

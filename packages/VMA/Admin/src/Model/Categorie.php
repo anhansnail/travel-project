@@ -10,5 +10,4 @@ namespace VMA\Admin\Model;
 use Illuminate\Database\Eloquent\Model;
 
 class Categorie extends BaseModel {
-
 }

@@ -13,7 +13,7 @@ define('TABLE_USERS','users');
 define('TABLE_ZONES','zones');
 define('TABLE_ROLES','roles');
 define('TABLE_PRODUCTS','products');
-define('TABLE_CATEGORY','category');
+define('TABLE_CATEGORY','categories');
 define('TABLE_MEDIAS','medias');
 define('TABLE_ORDER_ITEMS','order_items');
 define('TABLE_ORDERS','orders');
