@@ -12,9 +12,6 @@
 
     <title>{{__('MINH ANH TRAVEL')}}</title>
 
-    <!-- Botman library - chatbot -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-
 
 
     <!-- Bootstrap core CSS -->
@@ -30,11 +27,11 @@
     <link href="<?php echo getUrl('/'); ?>/ClientAsset/css/dropdown-menu.css" rel="stylesheet">
     @yield('client_css')
 
-{{--    <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/jquery.min.js" type="text/javascript"></script>--}}
-{{--    <!-- Include all compiled plugins (below), or include individual files as needed -->--}}
-{{--    <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/bootstrap.min.js" type="text/javascript"></script>--}}
-{{--    <script type="text/javascript" src="<?php echo getUrl('/'); ?>/ClientAsset/js/jquery.sticky.js"></script>--}}
-{{--    <script type="text/javascript" src="<?php echo getUrl('/'); ?>/ClientAsset/js/sticky-header.js"></script>--}}
+    <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="<?php echo getUrl('/'); ?>/ClientAsset/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="<?php echo getUrl('/'); ?>/ClientAsset/js/sticky-header.js"></script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     {!! \VMA\User\Library\CGlobal::$extraHeaderJS !!}
     {!! \VMA\User\Library\CGlobal::$extraHeaderCSS !!}

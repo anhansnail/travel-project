@@ -4,18 +4,20 @@ namespace VMA\Client\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use VMA\Client\Helper;
 use VMA\Admin\Model\Contact;
+use VMA\Admin\Services\CommonService;
+use VMA\Client\Helper;
 
 class ContactController extends Controller
 {
 
-    public $_user;
+    public $__user;
+    public $__commonService;
 
-    public function __construct()
+    public function __construct(CommonService $commonService)
     {
+        $this->__commonService = $commonService;
     }
 
     public function index()
@@ -36,14 +38,17 @@ class ContactController extends Controller
         $model->phone=$request->input("phone");
         $model->subject=$request->input("subject");
         $model->content=$request->input("content");
-        $model->created_at=$request->input("created_at");
-        $model->updated_at=$request->input("updated_at");
+        $send = $this->__commonService->sendMailContact(
+            $request->input("email"),
+            $request->input("name"),
+            'client::mail.mail_contact',
+            'client.contact',
+            'Contact Mail');
+        $contact = $model->save();
 
-        $model->save();
-        return redirect()->route(
-            'client.contact'
-        )->with('status', 'Data saved!');
-
+            return redirect()->route(
+                'client.contact'
+            )->with('status', 'Data saved!');
 
     }
 

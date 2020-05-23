@@ -1,4 +1,9 @@
 @extends('client::layout.master')
+@section('client_css')
+    <!-- Botman library - chatbot -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+
+@endsection
 @section('client_content')
 
     <!-- content -->
@@ -33,9 +38,9 @@
                     <div class="blog-post-body">
                         <h2><a href="#">{{$new->title}}</a></h2>
                         <div class="post-meta"><span>by <a href="#" class="text-danger">{{$new->user_id}}</a></span>/<span><i
-                                        class="fa fa-clock-o"></i>{{date_format($new->created_at,'Y-m-d') }}</span>/<span><i
+                                        class="fa fa-clock-o"></i>{{date('d/m/Y', strtotime($new->created_at))}}</span>/<span><i
                                         class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
-                        <p>{{$new->content}}</p>
+                        <p>{{str_limit($new->content,100)}} &raquo;</p>
                         <div class="read-more"><a href="#">Continue Reading</a></div>
                     </div>
                 </article>
@@ -67,7 +72,7 @@
                                     <div class="post-body">
                                         <h2><a href="#">{{$new->title}}</a></h2>
                                         <div class="post-meta">
-                                            <span><i class="fa fa-clock-o"></i> {{date_format($new->created_at,'Y-m-d') }}</span>
+                                            <span><i class="fa fa-clock-o"></i> {{date('d/m/Y', strtotime($new->created_at))}}</span>
                                             <span><a
                                                         href="#"><i class="fa fa-comment-o"></i> 23</a></span>
                                         </div>
@@ -108,15 +113,19 @@
             </div>
         </div>
     </section>
+
     <script>
         var botmanWidget = {
             frameEndpoint: '/botman/chat',
             title: 'Minh Anh',
-            bubbleBackground : '#ff9775',
-            mainColor : '#FF9775',
-            displayMessageTime : true
-
+            bubbleBackground: '#589442',
+            mainColor: '#589442',
+            displayMessageTime: true,
+            // backgroundImage : false
         };
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+    {{--Botman chatbot--}}
+
+    {{--    <script id="botmanWidget" src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/chat.js'></script>--}}
 @endsection

@@ -7,8 +7,6 @@
  */
 namespace VMA\Admin\Model;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Product extends BaseModel {
 
     protected $table = TABLE_PRODUCTS;
@@ -44,6 +42,14 @@ class Product extends BaseModel {
                     $query->whereIn('id', $dataSearch['user_id']);
                 } elseif ($dataSearch['user_id'] > 0) {
                     $query->where('id', $dataSearch['user_id']);
+                }
+            }
+
+            if (isset($dataSearch['price'])) {
+                if (is_array($dataSearch['price'])) {
+                    $query->whereIn('price', $dataSearch['price']);
+                } elseif ($dataSearch['price'] > 0) {
+                    $query->where('price', $dataSearch['price']);
                 }
             }
 

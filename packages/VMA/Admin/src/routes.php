@@ -50,4 +50,15 @@ Route::group(['middleware' => ['web', 'checkPermission']], function () {
     Route::get('contact/read', 'VMA\Admin\Controllers\Contact\ReadController@index');
     Route::post('contact/update', 'VMA\Admin\Controllers\Contact\UpdateController@index');
     Route::get('contact/delete/{id}', 'VMA\Admin\Controllers\Contact\DeleteController@index');
+
+    #quản lí media
+    Route::get('media/index','VMA\Admin\Controllers\Media\IndexController@index')->name('media.index');
+    Route::get('media/slide/index','VMA\Admin\Controllers\Media\IndexSlideController@index')->name('media.index');
+    Route::get('media/create','VMA\Admin\Controllers\Media\CreateController@index')->name('media.create');
+    Route::get('media/edit/{id}','VMA\Admin\Controllers\Media\EditController@index')->name('media.edit');
+    Route::post('media/store','VMA\Admin\Controllers\Media\StoreController@index');
+    Route::get('media/search','VMA\Admin\Controllers\Media\SearchController@index');
+    Route::get('media/read','VMA\Admin\Controllers\Media\ReadController@index');
+    Route::post('media/update','VMA\Admin\Controllers\Media\UpdateController@index');
+    Route::get('media/delete/{id}','VMA\Admin\Controllers\Media\DeleteController@index');
 });

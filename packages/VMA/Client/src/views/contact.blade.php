@@ -2,7 +2,13 @@
 @section('client_content')
 
     <!-- content -->
-
+@if(\Illuminate\Support\Facades\Session::has('success'))
+    <div class="alert alert-success">
+        <b>
+            success
+        </b>
+    </div>
+    @endif
     <div class="space-medium">
         <div class="container">
             <div class="row">

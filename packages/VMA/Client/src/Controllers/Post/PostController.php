@@ -1,6 +1,6 @@
 <?php
 
-namespace VMA\Client\Controllers\Product;
+namespace VMA\Client\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ use VMA\User\Model\User;
 use VMA\Admin\Model\Product;
 use VMA\Admin\Model\Categorie;
 
-class ProductController extends Controller
+class PostController extends Controller
 {
 
     public $__product;

@@ -9,10 +9,10 @@ namespace VMA\Admin\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends BaseModel {
-    protected $table = TABLE_CONTACT;
+class Media extends BaseModel {
+    protected $table = TABLE_MEDIAS;
     protected $primaryKey = 'id';
     public $timestamps = false;
-    protected $fillable = array('name', 'email','subject','content',
+    protected $fillable = array('title', 'url','code','user_id','status',
         'created_at','updated_at');
 }

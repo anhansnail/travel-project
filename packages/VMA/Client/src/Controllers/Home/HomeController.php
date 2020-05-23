@@ -25,14 +25,14 @@ class HomeController extends Controller
         $this->_post = $post;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         #get posts, get categories
 
         $categories = [];
         $posts = [];
         $categories = $this->_category->where('status','open')->get();
-        $posts = $this->_post->where('status','open')->get();
+        $posts = $this->_post->where('status','open')->take(5)->get();
         return view('client::home',['categories'=>$categories, 'posts'=>$posts]);
     }
 

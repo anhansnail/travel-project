@@ -18,7 +18,7 @@
                     <a class="btn" href="{{url('/client/home')}}">Home</a>
                 </li>
                 <li class="dropdown">
-                    <a class="btn" onmouseenter="check_category();" href="{{url('/client/product')}}">Travel
+                    <a class="btn" onmouseenter="check_category();" href="{{url('/client/product/category/all')}}">Travel
                         Service
                     </a>
                     <div id="manu_category" class="dropdown-content ">
@@ -26,7 +26,7 @@
                     </div>
                 </li>
                 <li>
-                    <a class="btn" href="{{url('/client/product')}}">News</a>
+                    <a class="btn" href="{{url('/client/post')}}">News</a>
                 </li>
                 <li>
                     <a class="btn " href="{{url('/client/about_us')}}">About Us</a>

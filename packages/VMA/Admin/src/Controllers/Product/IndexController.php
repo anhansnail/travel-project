@@ -1,6 +1,6 @@
 <?php
 namespace VMA\Admin\Controllers\Product;
-
+use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -10,7 +10,11 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $records=Product::paginate(3);
+//        dd(URL::current());
+//        dd(app_path());
+//        dd(base_path('storage\upload'));
+//        dd(storage_path('app\upload<\>'));
+        $records=Product::paginate(10);
         return view('admin::product.index', ['records' => $records]);
     }
 
