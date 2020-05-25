@@ -49,6 +49,7 @@ define('PATH_AVATAR_BH','avatar/BH');
 define('PATH_AVATAR_DN','avatar/DN');
 define('PATH_AVATAR_Customer','avatar/Customer');
 define('PATH_PRODUCT','product');
+define('PATH_MEDIA_SLIDE','slide');
 define('PATH_CHECK_IN','check-in');
 define('PATH_TRANSACTION_RECHARGE','recharge_wallet');
 

@@ -38,7 +38,7 @@ class ChatbotOptionConversation extends Conversation
                     case 'q_and_a':
                         $this->bot->startConversation(new QAndAConversation());
                         break;
-                    case 'contatct':
+                    case 'contact':
                         $this->bot->startConversation(new ContactOptionConversation());
                         break;
                 }

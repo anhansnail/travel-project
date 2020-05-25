@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit">Submit
+                                    <button onclick="confirm('Do you want to send contact?')" id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit">Submit
                                     </button>
                                 </div>
                             </div>

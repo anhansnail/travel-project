@@ -22,12 +22,8 @@
             </header>
             <div class="panel-body">
                 <div class="position-center">
-                    <form action="{{url('post/store')}}" method="post" role="form">
+                    <form action="{{url('post/store')}}" method="post" role="form" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                                 <div class="form-group">
-            <label for="exampleInputEmail1">id</label>
-            <input type="text" name="id" class="form-control" id="id">
-         </div>
          <div class="form-group">
             <label for="exampleInputEmail1">title</label>
             <input type="text" name="title" class="form-control" id="title">
@@ -36,37 +32,16 @@
             <label for="exampleInputEmail1">content</label>
             <input type="text" name="content" class="form-control" id="content">
          </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">image</label>
-            <input type="text" name="image" class="form-control" id="image">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">user_id</label>
-            <input type="text" name="user_id" class="form-control" id="user_id">
-         </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">image<b style="color: red">(*)</b></label>
+                            <input type="file" name="image" class="form-control" id="image">
+                        </div>
          <div class="form-group">
             <label for="exampleInputEmail1">status</label>
             <input type="text" name="status" class="form-control" id="status">
          </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">created_at</label>
-            <input type="text" name="created_at" class="form-control" id="created_at">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">updated_at</label>
-            <input type="text" name="updated_at" class="form-control" id="updated_at">
-         </div>
 
-                        <!-- <div class="form-group">
-                             <label for="exampleInputFile">File input</label>
-                             <input type="file" id="exampleInputFile">
-                             <p class="help-block">Example block-level help text here.</p>
-                         </div>
-                         <div class="checkbox">
-                             <label>
-                                 <input type="checkbox"> Check me out
-                             </label>
-                         </div>-->
+
                         <button type="submit" class="btn btn-info">Submit</button>
                     </form>
                 </div>

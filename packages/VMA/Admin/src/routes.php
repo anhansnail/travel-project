@@ -53,7 +53,7 @@ Route::group(['middleware' => ['web', 'checkPermission']], function () {
 
     #quản lí media
     Route::get('media/index','VMA\Admin\Controllers\Media\IndexController@index')->name('media.index');
-    Route::get('media/slide/index','VMA\Admin\Controllers\Media\IndexSlideController@index')->name('media.index');
+//    Route::get('media/slide/index','VMA\Admin\Controllers\Media\IndexSlideController@index')->name('media.index');
     Route::get('media/create','VMA\Admin\Controllers\Media\CreateController@index')->name('media.create');
     Route::get('media/edit/{id}','VMA\Admin\Controllers\Media\EditController@index')->name('media.edit');
     Route::post('media/store','VMA\Admin\Controllers\Media\StoreController@index');
@@ -61,4 +61,14 @@ Route::group(['middleware' => ['web', 'checkPermission']], function () {
     Route::get('media/read','VMA\Admin\Controllers\Media\ReadController@index');
     Route::post('media/update','VMA\Admin\Controllers\Media\UpdateController@index');
     Route::get('media/delete/{id}','VMA\Admin\Controllers\Media\DeleteController@index');
+
+    #quan li q&a
+    Route::get('question_answer/index','VMA\Admin\Controllers\Question_answer\IndexController@index')->name('question_answer.index');
+    Route::get('question_answer/create','VMA\Admin\Controllers\Question_answer\CreateController@index')->name('question_answer.create');
+    Route::get('question_answer/edit/{id}','VMA\Admin\Controllers\Question_answer\EditController@index')->name('question_answer.edit');
+    Route::post('question_answer/store','VMA\Admin\Controllers\Question_answer\StoreController@index');
+    Route::get('question_answer/search','VMA\Admin\Controllers\Question_answer\SearchController@index');
+    Route::get('question_answer/read','VMA\Admin\Controllers\Question_answer\ReadController@index');
+    Route::post('question_answer/update','VMA\Admin\Controllers\Question_answer\UpdateController@index');
+    Route::get('question_answer/delete/{id}','VMA\Admin\Controllers\Question_answer\DeleteController@index');
 });

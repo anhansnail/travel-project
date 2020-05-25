@@ -21,11 +21,11 @@ class SearchController extends Controller
          ->orWhere('created_at', 'LIKE', "%$query%")
          ->orWhere('updated_at', 'LIKE', "%$query%")
 
-            ->paginate(3);
+            ->paginate(20);
         }
         else
         {
-            $records = Contact::orderBy('id', 'DESC')->paginate(3);
+            $records = Contact::orderBy('id', 'DESC')->paginate(20);
         }
 
         //$records=Contact::paginate(15);

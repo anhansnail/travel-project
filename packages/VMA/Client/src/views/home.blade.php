@@ -7,24 +7,21 @@
 @section('client_content')
 
     <!-- content -->
-
+    <script>
+        $('.bxslider').bxSlider({
+            pause: 3000
+        });
+    </script>
     <section class="main-slider">
         <ul class="bxslider">
-            <li>
-                <div class="slider-item"><img src="<?php echo URL::to('/');  ?>/images/MA.png" title="Funky roots"/>
-                    <h2><a href="#" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your
-                            Home</a></h2></div>
-            </li>
-            <li>
-                <div class="slider-item"><img src="<?php echo URL::to('/');  ?>/images/MA.png" title="Funky roots"/>
-                    <h2><a href="#" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your
-                            Home</a></h2></div>
-            </li>
-            <li>
-                <div class="slider-item"><img src="<?php echo URL::to('/');  ?>/images/MA.png" title="Funky roots"/>
-                    <h2><a href="#" title="Vintage-Inspired Finds for Your Home">Vintage-Inspired Finds for Your
-                            Home</a></h2></div>
-            </li>
+            @foreach($slides as $slide)
+                <li>
+                    <div class="slider-item">
+                        <img src="<?php echo url('images/media/slide').'/'.$slide->url; ?>" title="{{$slide->title}}" class="" style="width: 1140px;height: 500px">
+                        <h2><a href="#" title="Vintage-Inspired Finds for Your Home">{{$slide->title}}</a></h2></div>
+                </li>
+                @endforeach
+
         </ul>
     </section>
     <section>
@@ -124,6 +121,7 @@
             // backgroundImage : false
         };
     </script>
+
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
     {{--Botman chatbot--}}
 

@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $records=Contact::paginate(3);
+        $records=Contact::paginate(20);
         return view('admin::contact.index', ['records' => $records]);
     }
 

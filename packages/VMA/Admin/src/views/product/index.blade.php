@@ -19,12 +19,7 @@
         <div class="col-sm-12">
             <section class="panel">
                 <div class="panel-body">
-                    <!--                <button type="button" class="btn btn-default">Default</button>-->
-                    <a href="{{url('product/create')}}" class="btn btn-primary">Thêm mới</a>
-                    <!--                <button type="button" class="btn btn-success">Success</button>-->
-                    <!--                <button type="button" class="btn btn-info">Info</button>-->
-                    <!--                <button type="button" class="btn btn-warning">Warning</button>-->
-                    <!--                <button type="button" class="btn btn-danger">Danger</button>-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <a href="{{url('product/create')}}" class="btn btn-primary">Thêm mới</a>
                 </div>
             </section>
         </div>
@@ -78,9 +73,9 @@
                                 <td>{{$record->id}}</td>
                                 <td>{{$record->name}}</td>
                                 <td>{{$record->category_id}}</td>
-                                <td>{{$record->description}}</td>
+                                <td>{{str_limit($record->description,100)}}</td>
                                 <td>
-                                <img src="<?php echo url('images/product').'/'.$record->image; ?>" class="" style="width: 150px;">
+                                <img src="<?php echo url('images/product').'/'.$record->image; ?>" class="" style="max-width: 150px;">
                                 </td>
                                 <td>{{$record->price}}</td>
                                 <td>{{$record->discount}}</td>
@@ -95,18 +90,6 @@
                             </tr>
                             <?php } ?>
 
-
-                            <!-- <tr>
-                             <td>AGO</td>
-                             <td>ATLAS IRON LIMITED</td>
-                             <td class="numeric">$3.17</td>
-                             <td class="numeric">-0.02</td>
-                             <td class="numeric">-0.47%</td>
-                             <td class="numeric">$3.11</td>
-                             <td class="numeric">$3.22</td>
-                             <td class="numeric">$3.10</td>
-                             <td class="numeric">5,416,303</td>
-                         </tr>-->
                             </tbody>
                         </table>
                     </section>

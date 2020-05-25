@@ -47,6 +47,20 @@ class CommonService {
         $image->storeAs('images/product/'.$path, $avatar_name);
         return $avatar_name;
     }
+    public function uploadMedia($image,$path = '')
+    {
+//        dd($path);
+        $avatar_name = '';
+        $image_extension=$image->getClientOriginalExtension();
+        if($image_extension != "jpg" && $image_extension != "png" && $image_extension !="jpeg"){
+            $response=Response::$error;
+            $response['message']="Ảnh không đúng định dạng. Vui lòng kiểm tra lại.";
+            return Response::response($response);
+        }
+        $avatar_name = strtotime(date('d-m-Y H:i:s')).'-'.str_slug($image->getClientOriginalName()).'.'.$image_extension;
+        $image->storeAs('images/media/slide/'.$path, $avatar_name);
+        return $avatar_name;
+    }
 
     public function sendMailCombineNpp($email = '',$token = '', $id = ''){
         try {

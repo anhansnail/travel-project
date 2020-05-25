@@ -2,12 +2,12 @@
 <footer class="footer">
 
     <div class="footer-socials">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-google-plus"></i></a>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-reddit"></i></a>
+        <a href="https://www.facebook.com/minhanh.vuong.98"><i class="fa fa-facebook"></i></a>
+        <a href="https://github.com/anhansnail"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/anhansnail"><i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/anhansnail"><i class="fa fa-google-plus"></i></a>
+        <a href="https://github.com/anhansnail"><i class="fa fa-dribbble"></i></a>
+        <a href="https://github.com/anhansnail"><i class="fa fa-reddit"></i></a>
     </div>
 
     <div class="footer-bottom">

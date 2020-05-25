@@ -4,7 +4,6 @@
     <!-- content -->
     <section>
         <div class="table">
-            {{--            search advange--}}
             <form action="{{route('client.product')}}" class="">
                 <div class="row">
                     <div class="col-md-3 form-group">

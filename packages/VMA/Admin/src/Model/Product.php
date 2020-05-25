@@ -7,8 +7,10 @@
  */
 namespace VMA\Admin\Model;
 
-class Product extends BaseModel {
+use Laravel\Scout\Searchable;
 
+class Product extends BaseModel {
+    use Searchable;
     protected $table = TABLE_PRODUCTS;
     protected $primaryKey = 'id';
     public $timestamps = false;
@@ -16,6 +18,37 @@ class Product extends BaseModel {
         'status','created_at','updated_at');
     public function Categorie(){
         return $this->belongsTo('VMA\Admin\Model\Categorie','category_id','id');
+    }
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs()
+    {
+        return 'product';
+    }
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
+    }
+    /**
+     * Get the value used to index the model.
+     *
+     * @return mixed
+     */
+    public function getScoutKey()
+    {
+        return $this->id;
     }
     public function searchByCondition($dataSearch = array())
     {

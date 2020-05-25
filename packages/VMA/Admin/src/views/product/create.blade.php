@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">description</label>
-                                <input type="text" name="description" class="form-control" id="description">
+                                <textarea type="text" name="description" class="form-control" id="description"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">image<b style="color: red">(*)</b></label>

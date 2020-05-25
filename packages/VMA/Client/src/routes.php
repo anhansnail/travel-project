@@ -5,10 +5,14 @@ Route::get('/test', function () {
 
 #home
 Route::get('/client/home', 'VMA\Client\Controllers\Home\HomeController@index')->name('client.home');
+Route::get('/client/test',function (){
+    return view('client::detail.detail_product');
+});
 
 #product
 Route::any('/client/product/category/all', 'VMA\Client\Controllers\Product\ProductController@index')->name('client.product');
 Route::any('/client/product/category/{id}', 'VMA\Client\Controllers\Product\ProductCategoryController@product_category');
+Route::any('/client/product/{id}', 'VMA\Client\Controllers\Product\ProductController@detail');
 
 #post
 Route::any('/client/post', 'VMA\Client\Controllers\Post\PostController@index')->name('client.post');

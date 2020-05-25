@@ -8,31 +8,27 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use VMA\Client\Helper;
 use VMA\User\Model\User;
-use VMA\Admin\Model\Product;
+use VMA\Admin\Model\Post;
 use VMA\Admin\Model\Categorie;
 
 class PostController extends Controller
 {
 
-    public $__product;
+    public $__post;
 
-     function __construct(User $user, Product $product, Categorie $categorie)
+     function __construct(User $user, Post $post, Categorie $categorie)
     {
-        $this->__product = $product;
+        $this->__post = $post;
     }
     public function index(Request $request)
     {
         $records = [];
         $dataSearch = [
-            'price'=> $request->input('price',''),
-            'name'=> $request->input('name',''),
-            'category_id'=> $request->input('category_id',''),
+            'status'=>'open',
             'paginate'=> 1,
         ];
-        $records = $this->__product->searchByCondition($dataSearch);
-//        dd($records);
-        $id_category = 'all';
-        return view('client::product',['records'=>$records,'id_category'=>$id_category,'dataSearch'=>$dataSearch]);
+        $records = $this->__post->searchByCondition($dataSearch);
+        return view('client::post',['records'=>$records,'dataSearch'=>$dataSearch]);
     }
 
 }

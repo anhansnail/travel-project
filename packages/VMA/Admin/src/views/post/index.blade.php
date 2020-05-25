@@ -61,22 +61,17 @@
                                 <th>created_at</th>
                                 <th>updated_at</th>
                                 <th>Action</th>
-                                <!--<th class="numeric">Price</th>
-                                <th class="numeric">Change</th>
-                                <th class="numeric">Change %</th>
-                                <th class="numeric">Open</th>
-                                <th class="numeric">High</th>
-                                <th class="numeric">Low</th>
-                                <th class="numeric">Volume</th>-->
-                            </tr>
+                                             </tr>
                             </thead>
                             <tbody>
                             <?php foreach($records as $record){ ?>
                             <tr>
                                 <td>{{$record->id}}</td>
                                 <td>{{$record->title}}</td>
-                                <td>{{$record->content}}</td>
-                                <td>{{$record->image}}</td>
+                                <td>{{str_limit($record->content,100)}}</td>
+                                <td>
+                                    <img src="<?php echo url('images/product').'/'.$record->image; ?>" class="" style="max-width: 150px;">
+                                </td>
                                 <td>{{$record->user_id}}</td>
                                 <td>{{$record->status}}</td>
                                 <td>{{$record->created_at}}</td>
