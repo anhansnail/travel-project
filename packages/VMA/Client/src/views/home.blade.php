@@ -2,7 +2,10 @@
 @section('client_css')
     <!-- Botman library - chatbot -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-
+    <style>
+        .desktop-closed-message-avatar svg path[d] {
+        }
+    </style>
 @endsection
 @section('client_content')
 
@@ -113,17 +116,26 @@
 
     <script>
         var botmanWidget = {
-            frameEndpoint: '/botman/chat',
-            title: 'Minh Anh',
+            frameEndpoint: '<?php echo url('chatbot/endpoint');?>',
+            // frameEndpoint: '/botman/chat',
+            title: 'Minh Anh Smart',
             bubbleBackground: '#589442',
             mainColor: '#589442',
             displayMessageTime: true,
+
             // backgroundImage : false
         };
     </script>
 
+    <script type="text/javascript" language="javascript">
+        $(document).load(function () {
+            $(".path").attr({
+                "d": '',
+            });
+        });
+    </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
     {{--Botman chatbot--}}
 
-    {{--    <script id="botmanWidget" src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/chat.js'></script>--}}
+    {{--        <script id="botmanWidget" src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/chat.js'></script>--}}
 @endsection

@@ -5,8 +5,8 @@ Route::get('/test', function () {
 
 #home
 Route::get('/client/home', 'VMA\Client\Controllers\Home\HomeController@index')->name('client.home');
-Route::get('/client/test',function (){
-    return view('client::detail.detail_product');
+Route::get('/chatbot/endpoint',function (){
+    return view('endpoint');
 });
 
 #product
