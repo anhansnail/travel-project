@@ -1,6 +1,15 @@
 <?php
 Route::group(['middleware' => ['web', 'checkPermission']], function () {
 
+#Quản lí nhân viên
+    Route::get('user/index','VMA\Admin\Controllers\User\IndexController@index')->name('user.index');
+    Route::get('user/create','VMA\Admin\Controllers\User\CreateController@index')->name('user.create');
+    Route::get('user/edit/{id}','VMA\Admin\Controllers\User\EditController@index')->name('user.edit');
+    Route::post('user/store','VMA\Admin\Controllers\User\StoreController@index');
+    Route::get('user/search','VMA\Admin\Controllers\User\SearchController@index');
+    Route::get('user/read','VMA\Admin\Controllers\User\ReadController@index');
+    Route::post('user/update','VMA\Admin\Controllers\User\UpdateController@index');
+    Route::get('user/delete/{id}','VMA\Admin\Controllers\User\DeleteController@index');
 #Quản lí sản phẩm
     Route::get('product/index', 'VMA\Admin\Controllers\Product\IndexController@index')->name('product.index');
     Route::get('product/create', 'VMA\Admin\Controllers\Product\CreateController@index')->name('product.create');
@@ -71,4 +80,14 @@ Route::group(['middleware' => ['web', 'checkPermission']], function () {
     Route::get('question_answer/read','VMA\Admin\Controllers\Question_answer\ReadController@index');
     Route::post('question_answer/update','VMA\Admin\Controllers\Question_answer\UpdateController@index');
     Route::get('question_answer/delete/{id}','VMA\Admin\Controllers\Question_answer\DeleteController@index');
+
+    #ql booking
+    Route::get('booking/index','VMA\Admin\Controllers\Booking\IndexController@index')->name('booking.index');
+    Route::get('booking/create','VMA\Admin\Controllers\Booking\CreateController@index')->name('booking.create');
+    Route::get('booking/edit/{id}','VMA\Admin\Controllers\Booking\EditController@index')->name('booking.edit');
+    Route::post('booking/store','VMA\Admin\Controllers\Booking\StoreController@index');
+    Route::get('booking/search','VMA\Admin\Controllers\Booking\SearchController@index');
+    Route::get('booking/read','VMA\Admin\Controllers\Booking\ReadController@index');
+    Route::post('booking/update','VMA\Admin\Controllers\Booking\UpdateController@index');
+    Route::get('booking/delete/{id}','VMA\Admin\Controllers\Booking\DeleteController@index');
 });

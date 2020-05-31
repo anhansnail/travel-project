@@ -20,6 +20,7 @@ class ChatbotOptionConversation extends Conversation
             ->addButtons([
                 Button::create('Viet Nam Infomations')->value('vn_info'),
                 Button::create('Tour Informations')->value('tour_info'),
+                Button::create('Booking Services')->value('booking'),
                 Button::create('Q&A')->value('q_and_a'),
                 Button::create('Contact')->value('contact'),
             ]);
@@ -34,6 +35,9 @@ class ChatbotOptionConversation extends Conversation
                         break;
                     case 'tour_info':
                         $this->bot->startConversation(new TourInforOptionConversation());
+                        break;
+                    case 'booking':
+                        $this->bot->startConversation(new BookingConversation());
                         break;
                     case 'q_and_a':
                         $this->bot->startConversation(new QAndAConversation());

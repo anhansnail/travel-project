@@ -32,6 +32,16 @@ class CommonService {
             return redirect()->route($routeBack)->withErrors('status', 'Không thể gửi thư, vui lòng kiểm tra lại or liên hệ nhân viên kĩ thuật');
         }
     }
+    public function sendMailBooking($email,$name,$template,$routeBack,$subject,$product,$data){
+        try {
+           Mail::send($template, ['email' => $email,'name'=>$name,'product' =>$product,'data'=>$data], function ($m) use ($email,$name,$subject,$product) {
+                $m->from(env('MAIL_USERNAME'), 'Minh Anh Travel');
+                $m->to($email,$name)->subject($subject);
+            });
+        } catch (\Exception $exception) {
+            return redirect()->route($routeBack)->withErrors('status', 'Không thể gửi thư, vui lòng kiểm tra lại or liên hệ nhân viên kĩ thuật');
+        }
+    }
 
     public function uploadImage($image,$path = '')
     {

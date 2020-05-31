@@ -4,6 +4,8 @@ namespace App\Conversations;
 
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\BotMan\Messages\Incoming\Answer;
+use BotMan\BotMan\Messages\Outgoing\Actions\Button;
+use BotMan\BotMan\Messages\Outgoing\Question;
 use VMA\Admin\Model\Question_answer;
 
 
@@ -18,16 +20,33 @@ class QAndAConversation extends Conversation
     public $__q_and_a;
     public function askReason()
     {
+        $aqs = Question_answer::all();
+        $buttons = [];
+        foreach ($aqs as $c){
+            $button = Button::create($c->question)->value($c->id);
+            $buttons[]= $button;
+        }
+        $question = Question::create("Welcome my dear come to Minh Anh chatbot , and what do you want to ask??")
+            ->fallback('Unable to ask question')
+            ->callbackId('ask_reason')
+            ->addButtons($buttons);;
+        return $this->bot->ask($question, function (Answer $answer) {
 
-        $this->ask('Hello! What is your firstname?', function (Answer $answer) {
-            // Save result
-            $this->firstname = $answer->getText();
-
-            $this->say('Nice to meet you ' . $this->firstname);
-//            $this->askEmail();
-            $this->askRequire();
-
+            if ($answer->isInteractiveMessageReply()) {
+                $value = $answer->getValue();
+                $ans = Question_answer::find($value);
+                $this->say($ans->answer);
+            }
         });
+//        $this->ask('Hello! What is your firstname?', function (Answer $answer) {
+//            // Save result
+//            $this->firstname = $answer->getText();
+//
+//            $this->say('Nice to meet you ' . $this->firstname);
+////            $this->askEmail();
+//            $this->askRequire();
+//
+//        });
     }
 
     public function askRequire()
