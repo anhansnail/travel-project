@@ -72,7 +72,6 @@ class BookingConversation extends Conversation
     public function askService()
     {
         $this->ask('What service do you want to ?', function (Answer $answer) {
-//            $this->ask = $answer->getText();
             $this->checkRequire($answer->getText());
         });
 

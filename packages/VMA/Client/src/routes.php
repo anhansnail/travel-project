@@ -29,3 +29,9 @@ Route::post('/client/contact', 'VMA\Client\Controllers\ContactController@store')
 
 ###ajax
 Route::post('/client/check_menu_category', 'VMA\Client\Controllers\AjaxController@check_menu_category')->name('check.category.ajax');
+
+###multiple language
+Route::group(['middleware' => 'local'], function() {
+    Route::get('change-language/{language}', 'VMA\Client\Controllers\Home\HomeController@changeLanguage')
+        ->name('user.change-language');
+});

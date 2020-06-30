@@ -19,7 +19,7 @@ class StoreController extends Controller
         $this->validate($request, [
             //'name' => 'required|unique:users|max:255',
         ]);
-        $model=new User();
+        $model=new Users();
                 $model->id=$request->input("id");
         $model->name=$request->input("name");
         $model->role_id=$request->input("role_id");

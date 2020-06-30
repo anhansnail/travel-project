@@ -20,15 +20,11 @@ class StoreController extends Controller
             //'name' => 'required|unique:zones|max:255',
         ]);
         $model=new Zone();
-                $model->id=$request->input("id");
         $model->name=$request->input("name");
         $model->description=$request->input("description");
         $model->user_id=$request->input("user_id");
         $model->zone_parent_id=$request->input("zone_parent_id");
         $model->status=$request->input("status");
-        $model->created_at=$request->input("created_at");
-        $model->updated_at=$request->input("updated_at");
-
         $model->save();
         return redirect()->route(
             'zone.index'

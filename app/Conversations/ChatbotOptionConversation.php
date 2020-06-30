@@ -18,11 +18,12 @@ class ChatbotOptionConversation extends Conversation
             ->fallback('Unable to ask question')
             ->callbackId('ask_reason')
             ->addButtons([
-                Button::create('Viet Nam Infomations')->value('vn_info'),
+//                Button::create('Viet Nam Infomations')->value('vn_info'),
                 Button::create('Tour Informations')->value('tour_info'),
                 Button::create('Booking Services')->value('booking'),
                 Button::create('Q&A')->value('q_and_a'),
                 Button::create('Contact')->value('contact'),
+                Button::create('Talking To Minh Anh Smart')->value('ma'),
             ]);
 
         return $this->bot->ask($question, function (Answer $answer) {
@@ -30,9 +31,7 @@ class ChatbotOptionConversation extends Conversation
             if ($answer->isInteractiveMessageReply()) {
                 $value = $answer->getValue();
                 switch ($value) {
-                    case 'vn_info':
-                        $this->bot->startConversation(new VietNamInfoOptionConversation());
-                        break;
+//                  ApiAi
                     case 'tour_info':
                         $this->bot->startConversation(new TourInforOptionConversation());
                         break;
@@ -43,6 +42,9 @@ class ChatbotOptionConversation extends Conversation
                         $this->bot->startConversation(new QAndAConversation());
                         break;
                     case 'contact':
+                        $this->bot->startConversation(new ContactOptionConversation());
+                        break;
+                    case 'ma':
                         $this->bot->startConversation(new ContactOptionConversation());
                         break;
                 }

@@ -19,7 +19,7 @@
                 </li>
                 <li class="dropdown">
                     <a class="btn" onmouseenter="check_category();" href="{{url('/client/product/category/all')}}">Travel
-                        Service
+                        Services
                     </a>
                     <div id="manu_category" class="dropdown-content ">
                         <!-- Danh sách thư mục sẽ ở đây-->
@@ -43,6 +43,8 @@
                 <li><a href="https://github.com/anhansnail"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="https://github.com/anhansnail"><i class="fa fa-dribbble"></i></a></li>
                 <li><a href="https://github.com/anhansnail"><i class="fa fa-reddit"></i></a></li>
+{{--                <a href="{!! route('user.change-language', ['en']) !!}">English</a>--}}
+{{--                <a href="{!! route('user.change-language', ['vi']) !!}">Vietnam</a>--}}
             </ul>
 
         </div>

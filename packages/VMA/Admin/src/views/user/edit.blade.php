@@ -27,10 +27,7 @@
                     <form action="{{url('user/update')}}" method="post" role="form">
                         {{ csrf_field() }}
                         <input type="hidden" name="id" value="{{ $user->id }}">
-                                 <div class="form-group">
-            <label for="exampleInputEmail1">id</label>
-            <input type="text" name="id" value="{{ $user->id }}" class="form-control" id="id">
-         </div>
+
          <div class="form-group">
             <label for="exampleInputEmail1">name</label>
             <input type="text" name="name" value="{{ $user->name }}" class="form-control" id="name">
@@ -75,16 +72,7 @@
             <label for="exampleInputEmail1">remember_token</label>
             <input type="text" name="remember_token" value="{{ $user->remember_token }}" class="form-control" id="remember_token">
          </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">created_at</label>
-            <input type="text" name="created_at" value="{{ $user->created_at }}" class="form-control" id="created_at">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">updated_at</label>
-            <input type="text" name="updated_at" value="{{ $user->updated_at }}" class="form-control" id="updated_at">
-         </div>
-
-                        <button type="submit" class="btn btn-info">Submit</button>
+         <button type="submit" class="btn btn-info">Submit</button>
                     </form>
                 </div>
 

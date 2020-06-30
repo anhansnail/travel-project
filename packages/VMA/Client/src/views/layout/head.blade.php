@@ -26,7 +26,11 @@
     <link href="<?php echo getUrl('/'); ?>/ClientAsset/css/style.css" rel="stylesheet">
     <link href="<?php echo getUrl('/'); ?>/ClientAsset/css/dropdown-menu.css" rel="stylesheet">
     @yield('client_css')
-
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+    <style>
+        .desktop-closed-message-avatar svg path[d] {
+        }
+    </style>
     <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/jquery.min.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo getUrl('/'); ?>/ClientAsset/js/bootstrap.min.js" type="text/javascript"></script>

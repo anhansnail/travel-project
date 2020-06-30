@@ -3,7 +3,6 @@ namespace VMA\Admin\Controllers\Booking;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use VMA\Admin\Model\Booking;
 
 class SearchController extends Controller
@@ -13,8 +12,7 @@ class SearchController extends Controller
         $query = $request->input('q');
         if ($query)
         {
-            $records = Booking::where('name', 'LIKE', "%$query%")
-                     ->orWhere('id', 'LIKE', "%$query%")
+            $records = Booking::where('name', 'LIKE', "%$query%")->orWhere('id', 'LIKE', "%$query%")
          ->orWhere('product_id', 'LIKE', "%$query%")
          ->orWhere('customer_name', 'LIKE', "%$query%")
          ->orWhere('customer_email', 'LIKE', "%$query%")

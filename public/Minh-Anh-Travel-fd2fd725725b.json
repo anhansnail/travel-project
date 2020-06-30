@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "minh-anh-travel-bhplpi",
+  "private_key_id": "fd2fd725725b63ddc82251f3142422e92ac9a86f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9X7to0s2w2fPG\n12t02srpmaGHa9ihd4du/ibgaeYq6D5PDa/UH7s96ySKC7l7OxajRXVq9cIw3+nv\nYzoegbnKvTatdXV49tun+eg/eCDvhkU8dzhtw9D1dLKPiWOBPqEey8wcETYbdj3i\nX260TduraXpwBOtJvS/NEmvgj0IdrgGLtkFVCrNBRfG3XDORMN9GXcFBlO2dvje4\nwkzYdhThHshP30EitxpyOfHBWe9fbgmXpT/OjedEQwTLt88o8nlxuKT8p3CEcDm5\nmaD88LxWJhGZTg/CsIwgXXk4x8tJJhL0g0knxN7YqJfNJ1s/fwIE6WEW2owJ7Qf9\nCcxdEID3AgMBAAECggEAOVMl2Xzai/rmCt6B5j0m6GC7n1E7oeEba7NelFcqN/nW\nhrqna4hxdzRberhC3PVNjH4FpaugLYhSeccpPDvbwG3Xg9mHBmd/pZEGR1Q3cBpO\nkheqyrtYYT0ComWd6+1H+5kIf8SMAvMfl4t46PaalQBYclli2g79TdASPMdQ5ceV\ntMi8TkGNeeytn+togSz+r8qozZBSHQLze+Bg23xOeQHzg8HA46Ki1lU9S2Og3KYd\nRgIV+9Y/T0+rByymyAdHKOqfbQCWu8Vq9LiZO1lAShW2S7JsBLxiRyYJSry9ptpk\nhXDbXDwh/2dX91g7xicLAAGJ2FCtp055H0SUjRcSMQKBgQDnOzQHLNCIlh8awAvP\n1DzcWXdwNVd1JvRPkKxtGVy4W6ONga/IWZ47LamyYuO1mU8kkxTMh3IiJo0BRpZk\n5zz0p3KjDDbXEPXBUOexLHsXtXjKP5ZrJoM95fkxvI+keO6X0pf6rOH96guqimDf\ny8x5iy2bZJrWDYG7mv1e4icRUQKBgQDRqLj6gdyTccwIPvbUN2ul5tl+u3VOBI9U\nC1zK4C1HkucYe+egM+5DSEDJzBIztJI/Cttb+vA+AiDoZBfsskwlo3Q4NMsPsAku\ncl22L0/lgXE2EQMkiKkfB9KSfMRw6h1o4A0ePjEBDn6v/ucxXtIdOmLiMnVQuhiq\n0BYlmFabxwKBgD/YAdqFTiKYSIhLRDei4xb4ANlTcQ1grw4U5PbOjOI+Mx9MEmvg\nCqdOSU9+rF6ksMxpa9G5CBNTz5Ttl3LOwe7PGQDZy36AKUqx+vbZUDdQnMRC4FY/\ncPczOyW3aXXBCieTNvE4sME50PTKdkr0a0WX3wTLt1CotAxHk/ORv7WxAoGBALjd\nt/WTKiaMkea3djdbgrzvV9nqex3G4Yau2iw9DU/uFX0+S9ez0qRbAl2tZmNXFhkm\nfpOVKd7TS6b+EyZvdLs/bEvfKSn1A7ODvmPVRfLNd0DAMXA2XEFzSVZHU4Nou3Pt\nE0QWfGk9GbIf5kVfIZAKGoTvDwiWfwemodCWic+jAoGAJxasn/YMWjKOfknwcbe/\n3mEDqs8E9DWw4V5n5LMiR3JWcOyDwT26TLWPCkW5d7XmLY2W1sVa0H6hgtNhil6r\nDL66jpebK9sKy1gUPfg+9pol+a6HfV3KJOGJ2qE9aRssRQYkiyHJYdva18keaOC9\nf4v9OtI2BiBYOc9e4D9V8+M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-tdxmjw@minh-anh-travel-bhplpi.iam.gserviceaccount.com",
+  "client_id": "103792641613552882836",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-tdxmjw%40minh-anh-travel-bhplpi.iam.gserviceaccount.com"
+}

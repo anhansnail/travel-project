@@ -10,7 +10,7 @@
 
     html, body {
         background-color: #f9f9f9;
-        background-image: url("<?php echo getUrl('/'); ?>/client/chatbot/image/pineapple.png");
+        background-image: url("<?php echo getUrl('/'); ?>/client/chatbot/image/lo.jpg");
     @import url('https://fonts.googleapis.com/css?family=Ubuntu');
         font-family: 'Ubuntu', "Helvetica Neue", Arial, sans-serif;
         font-size: 14px;

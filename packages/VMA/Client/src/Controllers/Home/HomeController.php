@@ -40,5 +40,10 @@ class HomeController extends Controller
         $posts = $this->_post->where('status','open')->take(5)->get();
         return view('client::home',['categories'=>$categories, 'posts'=>$posts,'slides'=>$slides]);
     }
+    public function changeLanguage($language)
+    {
+        Session::put('website_language', $language);
 
+        return redirect()->back();
+    }
 }

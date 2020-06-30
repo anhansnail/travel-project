@@ -12,17 +12,16 @@ class SearchController extends Controller
         $query = $request->input('q');
         if ($query)
         {
-            $records = Product::where('name', 'LIKE', "%$query%")
-                     ->orWhere('id', 'LIKE', "%$query%")
-         ->orWhere('name', 'LIKE', "%$query%")
-         ->orWhere('category_id', 'LIKE', "%$query%")
-         ->orWhere('description', 'LIKE', "%$query%")
-         ->orWhere('image', 'LIKE', "%$query%")
-         ->orWhere('price', 'LIKE', "%$query%")
-         ->orWhere('discount', 'LIKE', "%$query%")
-         ->orWhere('status', 'LIKE', "%$query%")
-         ->orWhere('created_at', 'LIKE', "%$query%")
-         ->orWhere('updated_at', 'LIKE', "%$query%")
+            $records = product::where('name', 'like', "%$query%")->orwhere('id', 'like', "%$query%")
+         ->orwhere('name', 'like', "%$query%")
+         ->orwhere('category_id', 'like', "%$query%")
+         ->orwhere('description', 'like', "%$query%")
+         ->orwhere('image', 'like', "%$query%")
+         ->orwhere('price', 'like', "%$query%")
+         ->orwhere('discount', 'like', "%$query%")
+         ->orwhere('status', 'like', "%$query%")
+         ->orwhere('created_at', 'like', "%$query%")
+         ->orwhere('updated_at', 'like', "%$query%")
 
             ->paginate(20);
         }

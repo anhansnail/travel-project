@@ -34,11 +34,6 @@
             <section class="panel">
                 <header class="panel-heading">
                     Users table
-                    <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-cog"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
                 </header>
                 <div class="panel-body">
                     <div class="table">

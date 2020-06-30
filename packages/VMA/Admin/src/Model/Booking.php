@@ -13,7 +13,7 @@ class Booking extends BaseModel
     protected $table = 'bookings';
     protected $primaryKey = 'id';
     public $timestamps = false;
-    protected $fillable = array('	product_id', 'customer_name', 'customer_email', 'customer_phone	', 'people', 'note',
+    protected $fillable = array('product_id', 'customer_name', 'customer_email', 'customer_phone', 'people', 'note',
         'status', 'created_at', 'updated_at');
 
     public function Categorie()

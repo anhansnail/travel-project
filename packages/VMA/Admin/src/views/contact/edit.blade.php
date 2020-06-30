@@ -27,10 +27,7 @@
                     <form action="{{url('contact/update')}}" method="post" role="form">
                         {{ csrf_field() }}
                         <input type="hidden" name="id" value="{{ $contact->id }}">
-                                 <div class="form-group">
-            <label for="exampleInputEmail1">id</label>
-            <input type="text" name="id" value="{{ $contact->id }}" class="form-control" id="id">
-         </div>
+
          <div class="form-group">
             <label for="exampleInputEmail1">email</label>
             <input type="text" name="email" value="{{ $contact->email }}" class="form-control" id="email">
@@ -42,14 +39,6 @@
          <div class="form-group">
             <label for="exampleInputEmail1">content</label>
             <input type="text" name="content" value="{{ $contact->content }}" class="form-control" id="content">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">created_at</label>
-            <input type="text" name="created_at" value="{{ $contact->created_at }}" class="form-control" id="created_at">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">updated_at</label>
-            <input type="text" name="updated_at" value="{{ $contact->updated_at }}" class="form-control" id="updated_at">
          </div>
 
                         <button type="submit" class="btn btn-info">Submit</button>

@@ -72,7 +72,7 @@
                                         <span>{{$category->name}}</span>
                                     </div>
                                     <div>
-                                        <p class="testimonial-text">{{$product->description}}</p>
+                                        <p class="testimonial-text">{{str_limit($product->description,100)}}</p>
                                     </div>
                                 </div>
                             </div>

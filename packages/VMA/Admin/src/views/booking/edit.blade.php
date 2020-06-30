@@ -27,10 +27,7 @@
                     <form action="{{url('booking/update')}}" method="post" role="form">
                         {{ csrf_field() }}
                         <input type="hidden" name="id" value="{{ $booking->id }}">
-                                 <div class="form-group">
-            <label for="exampleInputEmail1">id</label>
-            <input type="text" name="id" value="{{ $booking->id }}" class="form-control" id="id">
-         </div>
+
          <div class="form-group">
             <label for="exampleInputEmail1">product_id</label>
             <input type="text" name="product_id" value="{{ $booking->product_id }}" class="form-control" id="product_id">
@@ -58,14 +55,6 @@
          <div class="form-group">
             <label for="exampleInputEmail1">status</label>
             <input type="text" name="status" value="{{ $booking->status }}" class="form-control" id="status">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">created_at</label>
-            <input type="text" name="created_at" value="{{ $booking->created_at }}" class="form-control" id="created_at">
-         </div>
-         <div class="form-group">
-            <label for="exampleInputEmail1">updated_at</label>
-            <input type="text" name="updated_at" value="{{ $booking->updated_at }}" class="form-control" id="updated_at">
          </div>
 
                         <button type="submit" class="btn btn-info">Submit</button>

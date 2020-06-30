@@ -1,11 +1,7 @@
 @extends('client::layout.master')
 @section('client_css')
     <!-- Botman library - chatbot -->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-    <style>
-        .desktop-closed-message-avatar svg path[d] {
-        }
-    </style>
+{{--  --}}
 @endsection
 @section('client_content')
 
@@ -18,8 +14,8 @@
     <section class="main-slider">
         <ul class="bxslider">
             @foreach($slides as $slide)
-                <li>
-                    <div class="slider-item">
+                <li style="list-style: none; width: 720px; position: relative; float: right;margin: 0">
+                    <div class="slider-item " >
                         <img src="<?php echo url('images/media/slide').'/'.$slide->url; ?>" title="{{$slide->title}}" class="" style="width: 1140px;height: 500px">
                         <h2><a href="#" title="Vintage-Inspired Finds for Your Home">{{$slide->title}}</a></h2></div>
                 </li>
@@ -113,29 +109,4 @@
             </div>
         </div>
     </section>
-
-    <script>
-        var botmanWidget = {
-            frameEndpoint: '<?php echo url('chatbot/endpoint');?>',
-            // frameEndpoint: '/botman/chat',
-            title: 'Minh Anh Smart',
-            bubbleBackground: '#589442',
-            mainColor: '#589442',
-            displayMessageTime: true,
-
-            // backgroundImage : false
-        };
-    </script>
-
-    <script type="text/javascript" language="javascript">
-        $(document).load(function () {
-            $(".path").attr({
-                "d": '',
-            });
-        });
-    </script>
-    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
-    {{--Botman chatbot--}}
-
-    {{--        <script id="botmanWidget" src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/chat.js'></script>--}}
 @endsection
