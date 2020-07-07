@@ -25,7 +25,6 @@ class AjaxController extends Controller
         $categories = "";
         $resuls = "";
         $categories=Categorie::where('status','=','open')->get();
-//        dd($categories);
         if($categories != null){
             foreach ($categories as $cate){
                 $resuls = $resuls.'<a href="'.url('/').'/client/product/category/'.$cate->id.'">'.$cate->name.' </a>';

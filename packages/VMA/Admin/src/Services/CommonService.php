@@ -42,6 +42,26 @@ class CommonService {
             return redirect()->route($routeBack)->withErrors('status', 'Không thể gửi thư, vui lòng kiểm tra lại or liên hệ nhân viên kĩ thuật');
         }
     }
+    public function sendMailBookingOTP($email,$template,$routeBack,$subject,$OTP){
+        try {
+           Mail::send($template, ['email' => $email,'OTP' =>$OTP], function ($m) use ($email,$subject,$OTP) {
+                $m->from(env('MAIL_USERNAME'), 'Minh Anh Travel');
+                $m->to($email,$email)->subject($subject);
+            });
+        } catch (\Exception $exception) {
+            return redirect()->route($routeBack)->withErrors('status', 'Không thể gửi thư, vui lòng kiểm tra lại or liên hệ nhân viên kĩ thuật');
+        }
+    }
+    public function sendMailCancelBooking($email,$template,$routeBack,$subject,$booking){
+        try {
+           Mail::send($template, ['email' => $email,'booking'=>$booking], function ($m) use ($email,$subject,$booking) {
+                $m->from(env('MAIL_USERNAME'), 'Minh Anh Travel');
+                $m->to($email,$email)->subject($subject);
+            });
+        } catch (\Exception $exception) {
+            return redirect()->route($routeBack)->withErrors('status', 'Không thể gửi thư, vui lòng kiểm tra lại or liên hệ nhân viên kĩ thuật');
+        }
+    }
 
     public function uploadImage($image,$path = '')
     {

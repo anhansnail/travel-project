@@ -16,6 +16,7 @@ Route::any('/client/product/{id}', 'VMA\Client\Controllers\Product\ProductContro
 
 #post
 Route::any('/client/post', 'VMA\Client\Controllers\Post\PostController@index')->name('client.post');
+Route::any('/client/post/{id}', 'VMA\Client\Controllers\Post\PostController@detail')->name('client.post');
 
 #about us
 Route::get('/client/about_us', 'VMA\Client\Controllers\AboutUsController@index')->name('client.about_us');

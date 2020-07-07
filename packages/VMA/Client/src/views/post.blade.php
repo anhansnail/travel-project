@@ -28,9 +28,10 @@
                                              style="max-width: 360px; max-height: 150px"
                                              alt="Tour and Travel Agency - Information">
                                     </div>
-                                    <h2><a href="#">{{$post->title}}</a></h2>
+                                    <h2><a href="{{url('/').'/client/post/'.$post->id}}">{{$post->title}}</a></h2>
                                     <div class="post-meta">
-                                        <span>by<a href="#" class="text-danger">{{$post->user_id}}</a>
+                                        <span>by<a href="#"
+                                                   class="text-danger"> {{\VMA\User\Model\User::find($post->user_id)->name}}</a>
                                         </span>/
                                         <span>{{date('d/m/Y', strtotime($post->created_at))}}</span>/<span><i
                                                     class="fa fa-comment-o"></i> <a href="#">343</a></span></div>

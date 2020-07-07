@@ -29,15 +29,15 @@
                 @foreach($posts as $new)
                 <article class="blog-post">
                     <div class="blog-post-image">
-                        <a href="#"><img src="images/750x500-1.jpg" alt=""></a>
+                        <a href="{{url('/').'/client/post/'.$new->id}}"><img src="images/750x500-1.jpg" alt=""></a>
                     </div>
                     <div class="blog-post-body">
-                        <h2><a href="#">{{$new->title}}</a></h2>
-                        <div class="post-meta"><span>by <a href="#" class="text-danger">{{$new->user_id}}</a></span>/<span><i
+                        <h2><a href="{{url('/').'/client/post/'.$new->id}}">{{$new->title}}</a></h2>
+                        <div class="post-meta"><span>by <a href="#" class="text-danger">{{\VMA\User\Model\User::find($new->user_id)->name}}</a></span>/<span><i
                                         class="fa fa-clock-o"></i>{{date('d/m/Y', strtotime($new->created_at))}}</span>/<span><i
                                         class="fa fa-comment-o"></i> <a href="#">343</a></span></div>
                         <p>{{str_limit($new->content,100)}} &raquo;</p>
-                        <div class="read-more"><a href="#">Continue Reading</a></div>
+                        <div class="read-more"><a href="{{url('/').'/client/post/'.$new->id}}">Continue Reading</a></div>
                     </div>
                 </article>
                 @endforeach

@@ -31,4 +31,8 @@ class PostController extends Controller
         return view('client::post',['records'=>$records,'dataSearch'=>$dataSearch]);
     }
 
+    public function detail($id){
+         $post = $this->__post->find($id);
+        return view('client::detail.detail_post',['post'=>$post]);
+    }
 }

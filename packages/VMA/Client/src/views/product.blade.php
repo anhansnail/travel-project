@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="testimonial-content">
-                                    <h4>{{$product->name}}</h4>
+                                    <h4><a href="{{url('/').'/client/product/'.$product->id}}">{{$product->name}}</a></h4>
                                     <span class="location">{{$product->price}}</span>
                                     {{--                                    <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>--}}
                                     <div class="rating">

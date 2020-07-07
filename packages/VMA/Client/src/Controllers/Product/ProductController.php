@@ -4,12 +4,10 @@ namespace VMA\Client\Controllers\Product;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
+use VMA\Admin\Model\Categorie;
+use VMA\Admin\Model\Product;
 use VMA\Client\Helper;
 use VMA\User\Model\User;
-use VMA\Admin\Model\Product;
-use VMA\Admin\Model\Categorie;
 
 class ProductController extends Controller
 {
@@ -35,4 +33,9 @@ class ProductController extends Controller
         return view('client::product',['records'=>$records,'id_category'=>$id_category,'dataSearch'=>$dataSearch]);
     }
 
+    public function detail($id)
+    {
+        $product = $this->__product->find($id);
+        return view('client::detail.detail_product', ['product' => $product]);
+    }
 }

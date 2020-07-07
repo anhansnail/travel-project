@@ -90,4 +90,10 @@ Route::group(['middleware' => ['web', 'checkPermission']], function () {
     Route::get('booking/read','VMA\Admin\Controllers\Booking\ReadController@index');
     Route::post('booking/update','VMA\Admin\Controllers\Booking\UpdateController@index');
     Route::get('booking/delete/{id}','VMA\Admin\Controllers\Booking\DeleteController@index');
+
+    #dashboard
+    Route::get('booking_dashboard/index','VMA\Admin\Controllers\Dashboard\BookingController@index');
+    Route::get('service_dash_board/index','VMA\Admin\Controllers\Dashboard\ServiceController@index');
+    Route::get('contact_dashboard/index','VMA\Admin\Controllers\Dashboard\ContactController@index');
+
 });
